@@ -1,0 +1,121 @@
+name: Bug report
+description: Something in UIPilot does not work as the guide says.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. Every report gets a response.
+
+        This tracker is public. **Never post an invoice number or anything private here.**
+        For purchase questions, email NomadStudios47@outlook.com instead.
+
+  - type: input
+    id: uipilot-version
+    attributes:
+      label: UIPilot version
+      description: Shown in the Package Manager under My Assets, or in the changelog.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: unity-version
+    attributes:
+      label: Unity version
+      description: Shown in the title bar of the Unity Editor.
+      placeholder: "6000.3.11f1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: pipeline
+    attributes:
+      label: Render pipeline
+      options:
+        - Built-in
+        - URP
+        - HDRP
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: input-handling
+    attributes:
+      label: Active Input Handling
+      description: Project Settings > Player > Active Input Handling.
+      options:
+        - Input Manager (Old)
+        - Input System Package (New)
+        - Both
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of UIPilot?
+      options:
+        - Build UI
+        - Themes or Apply Theme
+        - The generated menus in Play mode
+        - UI Health
+        - Click Debugger
+        - Scan & Repair
+        - Manual section
+        - The guide or documentation
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe what you saw.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Starting from an empty scene is ideal.
+      placeholder: |
+        1. Open Tools > UIPilot
+        2. Click Build UI
+        3. Press Play
+        4. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Console output
+      description: Copy any warnings or errors from the Console. This is formatted as code automatically.
+      render: shell
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Drag images here. A screenshot of the UIPilot window or the Hierarchy helps a lot.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you send
+      options:
+        - label: I searched the existing issues and this is not one of them.
+          required: true
+        - label: This report contains no invoice number or other private details.
+          required: true

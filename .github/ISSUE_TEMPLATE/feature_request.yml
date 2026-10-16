@@ -1,0 +1,59 @@
+name: Feature request
+description: An idea that would make UIPilot more useful for your game.
+title: "[Idea] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea. Please search the existing issues first: if someone has
+        asked already, add a 👍 to theirs instead.
+
+        This tracker is public. **Never post an invoice number or anything private here.**
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The problem in your game or workflow, not the solution yet.
+      placeholder: "My game needs a ... menu, and today I have to ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: How would you like UIPilot to help?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of UIPilot?
+      options:
+        - A new menu or screen
+        - A new theme or genre
+        - Build UI
+        - Themes or Apply Theme
+        - UI Health (a new check)
+        - Click Debugger
+        - The guide or documentation
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots, sketches, or a game that does this well.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you send
+      options:
+        - label: I searched the existing issues and this is not one of them.
+          required: true
